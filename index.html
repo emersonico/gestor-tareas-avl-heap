@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestor de Tareas</h1>
+
+      <form id="task-form">
+        <input type="text" id="task-id" placeholder="ID de tarea" required />
+        <input type="text" id="task-desc" placeholder="Descripción" required />
+        <select id="task-priority">
+          <option value="1">Alta</option>
+          <option value="2">Media</option>
+          <option value="3">Baja</option>
+        </select>
+        <input type="date" id="task-date" required />
+        <button type="submit">Agregar tarea</button>
+      </form>
+
+      <h2>Tarea más prioritaria:</h2>
+      <div id="top-task">No hay tareas</div>
+
+      <h2>Buscar tarea por ID</h2>
+      <input type="text" id="search-id" placeholder="ID a buscar" />
+      <button onclick="buscarTarea()">Buscar</button>
+      <div id="search-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
